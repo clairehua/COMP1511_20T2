@@ -1,0 +1,10 @@
+// prints out a face
+// H11A, June 4
+
+#include <stdio.h>
+
+int main (void) {
+    printf("~  ~\n");
+  
+    return 0;
+}
