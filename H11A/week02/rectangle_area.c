@@ -20,7 +20,10 @@ int main(void) {
     
 
     // area = length * width;
-    printf("Area = %d\n", length * width);
+    printf("Area = %d\n", length * width, 
+                          variable1, 
+                          variable2,
+                          variable3);
 
     return 0;
 }
