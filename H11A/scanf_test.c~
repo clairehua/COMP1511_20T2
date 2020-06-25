@@ -1,0 +1,17 @@
+#include <stdio.h>
+
+int main(void) {
+    int number;
+    
+    
+    //printf("result was %d\n", result);
+    
+    //int result = ;
+    while (scanf("%d", &number) == 1) {
+        printf("you entered: %d\n", number);
+    }
+    
+    printf("bye bye\n");
+    
+    return 0;
+}
