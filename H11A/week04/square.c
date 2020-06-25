@@ -1,24 +1,31 @@
 #include <stdio.h>
 
-#define SIZE 1000
-
+void fill_with_squares(int size, int array[]);
 void array_print(int array[], int size);
 
 int main(void) {
-    //int number;
-    int inputs[SIZE];
+    int squares[15] = {0};
 
-    int index_so_far = 0;
-    while (scanf("%d", &inputs[index_so_far]) == 1) {
-        //printf("you entered: %d\n", number);
-        index_so_far++;
-    }
     
-    array_print(inputs, index_so_far);
+    array_print(squares, 15);
     
-    printf("bye bye\n");
+    fill_with_squares(15, squares);
     
+    array_print(squares, 15);
+
+
     return 0;
+}
+
+// take array and fill elements with square of indices
+void fill_with_squares(int size, int array[]) {
+
+    int i = 0;
+    
+    while (i < size) {
+        array[i] = i * i;
+        i++;
+    }
 }
 
 // no return value - void
@@ -37,6 +44,4 @@ void array_print(int array[], int size) {
     }
     printf("]\n");
 }
-
-
 

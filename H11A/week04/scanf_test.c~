@@ -35,7 +35,7 @@ void array_print(int array[], int size) {
         }
         i++;
     }
-    printf("]\n");
+    printf("]");
 }
 
 
