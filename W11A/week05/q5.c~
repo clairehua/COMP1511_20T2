@@ -1,0 +1,59 @@
+// investigating how variables are stored in C
+
+#include <stdio.h>
+
+int main(void) {
+
+    int n = 42;
+    int *p, *q;
+    printf("Declare an int n and int *p and int *q.\n");
+    printf("\t#################\n");
+    printf("\t#   int n = 42; #\n");
+    printf("\t#   int *p, *q; #\n");
+    printf("\t#################\n");
+    printf("Their addresses are:\n n \t %p\n*p \t %p\n*q \t %p\n", &n, p, q);
+
+    p = &n;
+    printf("\n\nSet p to equal address of n\n");
+    printf("\t#################\n");
+    printf("\t#   p = &n;     #\n");
+    printf("\t#################\n");
+    printf("Their addresses are:\n n \t %p\n*p \t %p\n*q \t %p\n", &n, &p, &q);
+    printf("The value stored in p is %p\n", p);
+    printf("The value stored in n is %d\n", n);
+
+    *p = 5;
+    printf("\n\nSet the value at the address of p to equal 5.");
+    printf("\n\t#################\n");
+    printf("\t#   *p = 5;     #\n");
+    printf("\t#################\n");
+    printf("The value stored in p is %p\n", p);
+    printf("The value stored at the address of p is %d\n", *p);
+    printf("The value stored in n is %d\n", n);
+
+    // *q = 17;
+    q = p;
+    printf("\n\nSet the value stored in q to be equal to the value stored in p.\n");
+    printf("\t#################\n");
+    printf("\t#   q = p;      #\n");
+    printf("\t#################\n");
+    printf("Their addresses are:\n n \t %p\n*p \t %p\n*q \t %p\n", &n, &p, &q);
+    printf("The value stored in p is %p\n", p);
+    printf("The value stored in q is %p\n", q);
+    printf("The value stored at the address of p is %d\n", *p);
+    printf("The value stored at the address of q is %d\n", *q);
+    printf("The value stored in n is %d\n", n);
+
+    *q = 8;
+    printf("\n\nSet the value at the address of q to equal 8.");
+    printf("\n\t#################\n");
+    printf("\t#   *q = 8;     #\n");
+    printf("\t#################\n");
+    printf("The value stored in p is %p\n", p);
+    printf("The value stored in q is %p\n", q);
+    printf("The value stored at the address of p is %d\n", *p);
+    printf("The value stored at the address of q is %d\n", *q);
+    printf("The value stored in n is %d\n", n);
+
+    return 0;
+}
