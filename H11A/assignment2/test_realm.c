@@ -56,7 +56,7 @@ void test_add_location(void) {
 
     // Test 1: Does add_location's return value count the Castle & Lair?
 
-    Realm test_realm = new_realm();
+    Realm test_realm = new_realm(); // we expect castle and lair (2 locations)
 
     int num_locations = add_location(test_realm, "Location");
     if (num_locations != 3) {
